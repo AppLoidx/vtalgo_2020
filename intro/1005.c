@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int get_min_from(int x, int y) { return y ^ ((x ^ y) & -(x < y)); }
+int get_min_from(int x, int y) { if(x < y) return x; return y; }
 
 int r_func(int iter, int spot1, int spot2, int values[]) {
 
